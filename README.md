@@ -1,1 +1,1 @@
-"# mad_libs"
+# mad_libs
