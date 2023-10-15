@@ -1,45 +1,16 @@
-#import modules
-import string
-import random
-#Stores all the possible characters
-s1 = list(string.ascii_lowercase)
-s2 = list(string.ascii_uppercase)
-s3 = list(string.digits)
-s4 = list(string.punctuation)
-#Takes the number of characters
-characters_number = input("Enter the number of characters you want to use: ")
-#Makes sure the number of characters is an integer && 6 or more
-while True:
-    try:
-        characters_number = int(characters_number)
-        if characters_number < 6 :
-            print("you need at least 6 characters")
-            characters_number = print("please enter a number again")
-        else:
-            break
-    except:
-        print("please enter  numbers only")
-        characters_number = input("Enter the number of characters you want to use: ")
+verb_1 = input("Enter a verb of choice, and press enter:")
+adj_1 = input("Enter a adjective of choice, and press enter:")
+verb_2 = input("Enter second verb of choice, and press enter:")
+body_part = input("Enter a body part name of choice, and press enter:")
+adverb = input("Enter an adverb of choice, and press enter:")
+body_part_2 = input("Enter any body name of your choice,and press enter:")
+noun = input("Enter a noun of choice, and press enter:")
+verb_3 = input("Enter the third verb of choice, and press enter:")
+animal = input("Enter name of any animal of choice, and press enter:")
+noub_2 = input("Enter an noun of choice , and press enter:")
+verb_4 = input("Enter the fourth verb of choice, and press enter:")
+adj_2 = input("Enter an adjective of chioce, and press enter:")
+color = input("Enter any color name, and press enter:\n")
+story = 'Most doctors agree that bicycle of' + verb_1 + ' is a/an ' + adj_1 + ' form of exercise.' + verb_2 +' a bicycle enables you to develop your ' + body_part + ' muscles as well as ' + adverb + ' increase the rate of a ' + body_part_2 + ' beat. More ' + noun + ' around the world '+ verb_3 + 'bicycles than drive '+ animal +'. No matter what kind of '+ noun +'you '+ verb_4 + ', always be sure to wear a/an  '+adj_2+'  helmet.Make sure to have ' + color + ' reflectors too! '
 
-#Shuffles all lists
-random.shuffle(s1)
-random.shuffle(s2)
-random.shuffle(s3)
-random.shuffle(s4)
-
-#claculate 30% and 20% of the characters
-part1 = round(characters_number * (30/100) )
-part2 = round(characters_number * (20/100) )
-
-#Create password 60% letters and 40% digits and punctuation
-password = []
-for i in range(part1):
-    password.append(s1[i])
-    password.append(s2[i])
-
-for i in range(part2):
-    password.append(s3[i])
-    password.append(s4[i])
-
-password="".join(password[0:])
-print(password)
+print(story)
